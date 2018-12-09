@@ -1,11 +1,15 @@
+const path = require('path');
+
 module.exports = {
   devtool: 'inline-source-map', // ソースマップファイル追加
   mode: 'development',
-  entry: './index.js', // エントリポイントのjsxファイル
+  entry: './src/index.js', // エントリポイントのjsxファイル
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js' // 出力するファイル
   },
   devServer: {
+    watchContentBase: true,
     host: "0.0.0.0",  // useLocalIPを有効化するために必要
     port: 3000,
     useLocalIp: true  // URLを`localhost`ではなく`IPアドレス`を指定して表示するのに必要。
