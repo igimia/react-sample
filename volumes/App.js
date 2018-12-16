@@ -1,7 +1,12 @@
 import React from 'react'
+// import Edit from './Edit'
+import Header from './Header'
 
 export default class App extends React.Component {
   render(){
-    return <h1>Hello, world!</h1>
+    return (
+        <Header/>
+
+    );
   }
 }

@@ -3,7 +3,8 @@ services:
   web:
     build: .
     ports:
-      - "18090:8080"
+      - "18090:3000"
     working_dir: /myapp
+    command: 'yarn start'
     volumes:
       - ./volumes:/myapp
